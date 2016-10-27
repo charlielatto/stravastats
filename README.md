@@ -27,6 +27,7 @@ Basic Club info (work in progress)
 
 ## Training Page - Training aid for Ride Across Britain 2017
 Countdown to the start
+
 Snapshot of how user riding over a selectable 9 day period compares with the event
 
 
