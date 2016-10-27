@@ -1,0 +1,139 @@
+var graphsJSON = [{
+		"type": "serial",
+		"theme": "light",
+		"marginTop":5,
+		"marginRight": 80,
+		"valueAxes": [{
+			"id":"v1",
+			"axisColor": "#d9534f",
+			"axisAlpha": 2,
+			"position" : "left",
+			"minimum":0,
+			"gridAlpha":0
+		}, {
+			"id":"v2",
+			"axisColor": "#337ab7",
+			"axisThickness": 2,
+			"axisAlpha": 1,
+			"gridAlpha":0,
+			"position": "right",
+			"minimum":0
+		}],
+		"graphs": [{
+			"valueAxis" : "v1",
+			"bullet": "round",
+			"bulletSize": 8,
+			"lineColor": "#d9534f",
+			"lineThickness": 2,
+			"type": "smoothedLine"
+		},{
+			"valueAxis": "v2",
+			"lineColor": "#337ab7",
+			"lineThickness": 2,
+			"bullet": "square",
+			"bulletSize": 8,
+			"type": "smoothedLine"
+		}],
+    "chartCursor": {
+        "valueLineEnabled":true,
+        "valueLineBalloonEnabled":true
+    },
+    "categoryField": "month",
+    "categoryAxis": {
+        "axisAlpha": 2,
+        "minHorizontalGap": 60,
+		"gridAlpha":0
+    }
+},{
+		"type": "serial",
+		"theme": "light",
+		"marginTop":5,
+		"marginRight": 80,
+		"valueAxes": [{
+			"id":"v1",
+			"axisColor": "#5cb85c",
+			"axisAlpha": 2,
+			"position" : "left",
+			"duration": "ss",
+			"durationUnits": {
+				"DD": "d ",
+				"hh": "h ",
+				"mm": "m ",
+				"ss": "s"
+			},
+			"labelRotation":45,
+			"gridAlpha":0
+		}, {
+			"id":"v2",
+			"axisColor": "#f0ad4e",
+			"axisThickness": 2,
+			"axisAlpha": 1,
+			"gridAlpha":0,
+			"position": "right",
+			"minimum":22
+		}],
+		"graphs": [{
+			"valueAxis" : "v1",
+			"bullet": "round",
+			"bulletSize": 8,
+			"lineColor": "#5cb85c",
+			"lineThickness": 2,
+			"type": "smoothedLine"
+		},{
+			"valueAxis": "v2",
+			"lineColor": "#f0ad4e",
+			"lineThickness": 2,
+			"bullet": "square",
+			"bulletSize": 8,
+			"type": "smoothedLine"
+		}],
+    "chartCursor": {
+        "valueLineEnabled":true,
+        "valueLineBalloonEnabled":true
+    },
+    "categoryField": "month",
+    "categoryAxis": {
+        "axisAlpha": 2,
+        "minHorizontalGap": 60,
+		"gridAlpha":0
+    }
+},{
+  "type": "pie",
+  "theme": "light",
+  "valueField": "total",
+  "titleField": "type",
+  "fontSize":18,
+   "balloon":{
+   "fixedPosition":true
+  }
+},{
+		"type": "serial",
+		"theme": "light",
+		"marginTop":5,
+		"marginRight": 80,
+		"valueAxes": [{
+			"id":"v1",
+			"axisColor": "#5cb85c",
+			"axisAlpha": 2,
+			"position" : "left",
+			"gridAlpha":0
+		}],
+		"graphs": [{
+			"valueAxis" : "v1",
+			"bullet": "round",
+			"bulletSize": 8,
+			"lineColor": "#5cb85c",
+			"lineThickness": 2,
+			"type": "smoothedLine"
+		}],
+    "chartCursor": {
+        "valueLineEnabled":true,
+        "valueLineBalloonEnabled":true
+    },
+    "categoryField": "day",
+    "categoryAxis": {
+        "axisAlpha": 2,
+        "minHorizontalGap": 60,
+		"gridAlpha":0
+    }
+}]

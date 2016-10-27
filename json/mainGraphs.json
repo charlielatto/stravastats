@@ -1,0 +1,53 @@
+var ridesDistanceGraph = [{
+		"type": "serial",
+		"theme": "light",
+		"marginTop":5,
+		"marginRight": 80,
+		"valueAxes": [{
+			"id":"v1",
+			"axisColor": "#d9534f",
+			"axisAlpha": 2,
+			"position" : "left",
+			"minimum":0,
+			"gridAlpha":0,
+			"title":"Rides"
+		}, {
+			"id":"v2",
+			"axisColor": "#337ab7",
+			"axisThickness": 2,
+			"axisAlpha": 1,
+			"gridAlpha":0,
+			"position": "right",
+			"minimum":0,
+			"title":"Distance (km)"
+		}],
+		"graphs": [{
+			"valueAxis" : "v1",
+			"balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[count]]</span></b>",
+			"bullet": "round",
+			"bulletSize": 8,
+			"lineColor": "#d9534f",
+			"lineThickness": 2,
+			"type": "smoothedLine",
+			"valueField": "count"
+		},{
+			"valueAxis": "v2",
+			"lineColor": "#337ab7",
+			"lineThickness": 2,
+			"balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[distance]]km</span></b>",
+			"bullet": "square",
+			"bulletSize": 8,
+			"type": "smoothedLine",
+			"valueField": "distance"
+		}],
+    "chartCursor": {
+        "valueLineEnabled":true,
+        "valueLineBalloonEnabled":true
+    },
+    "categoryField": "month",
+    "categoryAxis": {
+        "axisAlpha": 2,
+        "minHorizontalGap": 60,
+		"gridAlpha":0
+    }
+}]

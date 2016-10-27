@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Stats from Strava - Training Goals</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" crossorigin="anonymous"></script>
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script type="text/javascript" src="js/jquery.countdown.js"></script>
+		<script type="text/javascript" src="js/moment.js"></script>
+		<script type="text/javascript" src="js/bootstrap-datetimepicker-master/build/js/bootstrap-datetimepicker.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="js/bootstrap-datetimepicker-master/build/css/bootstrap-datetimepicker.min.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css">
+		<script src="js/stravageneral.js"></script>
+		<script src="js/stravatraining.js"></script>
+		<link href="css/stravahome.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Stats From Strava</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li id="homelink" ></li>
+			<li id="clublink" ></li>
+			<li id="traininglink" class="active"></li>
+			<li id="aboutlink"></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
+	<div class="container">
+		<div class="jumbotron">
+		<div class="row">
+			<div class="col-sm-3 col-md-2" id="pic2"></div>
+			<div class="col-sm-7">
+				<h1 class="name2">Deloitte Ride Across Britain 2017 Training</h1>
+			</div>
+		</div>
+		<p class="rideinfo lead">An epic 969 mile ride over 9 days from 9th to 17th September 2017</p>
+		<div class="alert alert-warning" role="alert">
+		<p class="rideinfo countdown">
+		</p>
+		</div>
+		
+		</div>
+		
+		<div class="lead">
+			<p><strong>User:</strong> <span class="user">User</span></p>
+			
+			<p>Select end date for a 9 day period:</p>
+			<div class="row">
+				<div class='col-sm-6'>
+					<div class="form-group">
+						<div class='input-group date' id='datetimepicker1'>
+							<input type='text' class="form-control" />
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-calendar"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<p>In the 9 days up to <span class="rideDate"></span> you did <span class="rideCount">0</span> rides, comparing that with what you'll do for RAB:</p>
+			<p>Distance (969 miles):</p>
+			<div class="progress">
+			<div class="progress-bar dist-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="969" style="min-width: 4%;">
+				<span class="progressamount dist-progressamount">0</span>  
+			</div>
+			</div>
+			<p>Elevation (12,641m):</p>
+			<div class="progress">
+			<div class="progress-bar elev-progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="12641" style="min-width: 4%;">
+				<span class="progressamount elev-progressamount">0</span>  
+			</div>
+			</div>
+			<p>Consecutive Riding Days (9 days):</p>
+			<div class="progress">
+			<div class="progress-bar days-progress-bar progress-bar-warning" role="progressbar" aria-valuemin="0" aria-valuemax="9" style="min-width: 2em;">
+				<span class="progressamount days-progressamount">0</span>  
+			</div>
+			</div>
+			<p>Time (at your average speed of <span class="avgspeed">16mph and estimated total time of 60.5 hours</span>):</p>
+			<div class="progress">
+			<div class="progress-bar time-progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="240000" style="min-width: 5%;">
+				<span class="progressamount time-progressamount">0</span>  
+			</div>
+
+			</div>
+			<p>Longest Ride (126 miles):</p>
+			<div class="progress">
+			<div class="progress-bar long-progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="126" style="min-width: 5%;">
+				<span class="progressamount long-progressamount">0</span>  
+			</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<footer class="footer navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container-footer">
+			<a href="http://labs.strava.com/" id="powered_by_strava" rel="nofollow">
+				<img class="poweredimg" src="img/api_logo_pwrdBy_strava_stack_light.png" alt="Powered By Strava" width="116" height="50" />
+			</a>
+			<div>
+	</footer>
+	
+
+	</body>
+
+</html>

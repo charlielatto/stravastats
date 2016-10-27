@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Stats from Strava - Connect To Strava</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+		<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+		<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+		<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+		<script src="js/stravalaunch.js"></script>
+		<link href="css/stravahome.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#fc4c02 !important">
+			<div class="container" >
+				<div class="navbar-header">
+					<a class="navbar-brand">Stats From Strava</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+	
+	<div class="container">
+		<div class="jumbotron">
+        <h1 class="name">Welcome!</h1>
+		<h3>User Strava Stats App</h3>
+		<p class="info">Click the button below and authorize this app to talk to Strava</p>
+		<button onclick="callStrava()" style="border: 0; background: transparent" type="button"><img  src="img/btn_strava_connectwith_orange@2x.png" alt="Connect with Strava" /></button>
+		</div>
+		
+		<div class="page-header">
+		<h1>What is this?</h1>
+		</div>
+		<div class="about">
+		<p class="lead">This is an experimental web server, running on a Raspberry Pi, that connects to the Strava API.<br>
+			Currently a work in progress, seeing what can be done with the API.</p>
+		<p class="lead">Current Features:</p>
+		<ul class="lead">
+			<li>User Authentication: Any user should be able to connect with Strava and view their data</li>
+			<li>Home:
+				<ul>
+					<li>Rider Info - Show rider info including: Name, Picture, Location and Clubs</li>
+					<li>Rider Overall Stats - Show rider totals: Total Distance, Total Rides, Longest Ride</li>
+					<li>12 Month Tab:
+						<ul>
+							<li>Rides and Distance per month graph for last 12 months</li>
+							<li>Time and Avg Speed per month graph for last 12 months</li>
+						</ul>
+					</li>
+					<li>Single Month Tab:
+						<ul> 
+							<li>Selector for month in last 12</li>
+							<li>Key Stats for the selected month</li>
+							<li>Rides vs Commutes Pie Chart for selected month</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Club - Basic Club info (work in progress)</li>
+			<li>Training - Training aid for Ride Across Britain 2017
+				<ul>
+					<li>Countdown to the start</li>
+					<li>Snapshot of how user riding over a selectable 9 day period compares with the event</li>
+				</ul>
+			</li>
+				
+		<ul>
+		</div>
+		
+		</div>
+		
+		
+		<footer class="footer navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container-footer">
+			<a href="http://labs.strava.com/" id="powered_by_strava" rel="nofollow">
+				<img class="poweredimg" src="img/api_logo_pwrdBy_strava_stack_light.png" alt="Powered By Strava" width="116" height="50" />
+			</a>
+			<div>
+		</footer>
+	
+	
+	
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</body>
+
+</html>

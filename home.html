@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Stats from Strava - Home</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+		<script src="https://www.amcharts.com/lib/3/pie.js"></script>
+		<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+		<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+		<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+		
+		<link href="css/stravahome.css" rel="stylesheet">
+		<script type="text/javascript" src="json/graphsJSON.json"></script>
+		<script src="js/stravahome.js"></script>
+		<script src="js/stravageneral.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Stats From Strava</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li id="homelink" class="active"></li>
+			<li id="clublink"></li>
+			<li id="traininglink"></li>
+			<li id="aboutlink"></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
+	<div class="container">
+		<div class="jumbotron">
+        <h1 class="name"></h1>
+		<div class="row">
+			<div class="col-sm-3 col-md-2" id="pic"></div>
+			<div class="col-sm-7">
+				<p class="info"></p>
+				<p class="achieve"></p>
+			</div>
+		</div>
+		</div>
+		<div>
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a  href="#year" data-toggle="tab">12 Months</a>
+				</li>
+				<li><a href="#month" data-toggle="tab">Single Month</a>
+				</li>
+			</ul>
+			
+			
+			<div class="tab-content">
+			
+			<div role="tabpanel" class="tab-pane active" id="year"> 
+				<div class="page-header">
+					<h1>Last 12 Months Stats</h1>
+				</div>
+				<div>
+					<h2><span class="label label-danger">Rides per Month</span><span class="label label-primary">Distance per Month</span></h2>
+					<div id="chartdiv"></div>
+				</div>
+				<div>
+					<h2><span class="label label-success">Time Per Month</span><span class="label label-warning">Avg Speed per Month</span></h2>
+					<div id="chartdiv2"></div>
+				</div>
+				<div>
+					<h3 ><span style="text-decoration:underline">When do you Ride?</span><small> Not including commutes</small></h3>
+					<div id="chartDiv3"></div>
+				</div>
+			</div>
+			
+			<div role="tabpanel" class="tab-pane" id="month">
+				<div class="page-header">
+					<h1>Monthly Stats<small class="monthDesc"></small></h1>
+				</div>
+				
+				<select onchange="monthSelector()" class="form-control monthSelector">
+
+				</select>
+				
+				<div>
+				<table class="table"> 
+					<caption>Last Months Stats</caption> 
+					<thead> 
+						<tr> 
+							<th>Rides</th> 
+							<th>Average Speed (kph)</th>
+							<th>Time (hh:mm:ss)</th>
+							<th>Distance (km)</th>
+							<th>Elevation (m)</th>
+							<th>Calories</th> 
+						</tr> 
+					</thead> 
+					<tbody> 
+						<tr> 
+							<th scope="row" class="tablerides"></th> 
+							<td class="tablespeed"></td> 
+							<td class="tabletime"></td> 
+							<td class="tabledist"></td>
+							<td class="tableelev"></td>							
+							<td class="tablecal"></td> 
+						</tr> 
+					</tbody> 
+				</table>
+				</div>
+				<div>
+					<h3 style="text-decoration:underline">Rides vs Commutes</h3>
+					<div id="monthChartDiv"></div>
+				</div>
+				
+			</div>
+			
+			</div>
+		</div>
+	</div>
+	
+	<footer class="footer navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container-footer">
+			<a href="http://labs.strava.com/" id="powered_by_strava" rel="nofollow">
+				<img class="poweredimg" src="img/api_logo_pwrdBy_strava_stack_light.png" alt="Powered By Strava" width="116" height="50" />
+			</a>
+			<div>
+	</footer>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</body>
+
+</html>
