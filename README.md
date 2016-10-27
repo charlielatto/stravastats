@@ -7,22 +7,25 @@ Connect with Strava on the index page to authorise the app to talk to your Strav
 
 Current Features:
 
-User Authentication: Any user should be able to connect with Strava and view their data
+## User Authentication: 
+Any user should be able to connect with Strava and view their data
 
-Home Page
+## Home Page
 Rider Info - Show rider info including: Name, Picture, Location and Clubs
+
 Rider Overall Stats - Show rider totals: Total Distance, Total Rides, Longest Ride
-12 Month Tab:
+#### 12 Month Tab:
 Rides and Distance per month graph for last 12 months
 Time and Avg Speed per month graph for last 12 months
-Single Month Tab:
+#### Single Month Tab:
 Selector for month in last 12
 Key Stats for the selected month
 Rides vs Commutes Pie Chart for selected month
 
-ClubPage - Basic Club info (work in progress)
+## ClubPage
+Basic Club info (work in progress)
 
-Training Page - Training aid for Ride Across Britain 2017
+## Training Page - Training aid for Ride Across Britain 2017
 Countdown to the start
 Snapshot of how user riding over a selectable 9 day period compares with the event
 
